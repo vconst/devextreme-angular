@@ -14,7 +14,7 @@ import {
 import { DxTemplateHost } from './template-host';
 import { getElement } from './utils';
 import * as events from 'devextreme/events';
-import * as domAdapter from 'devextreme/core/dom_adapter';
+import domAdapter from 'devextreme/core/dom_adapter';
 
 export const DX_TEMPLATE_WRAPPER_CLASS = 'dx-template-wrapper';
 

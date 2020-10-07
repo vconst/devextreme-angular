@@ -2,7 +2,7 @@ import {
     Injectable
 } from '@angular/core';
 
-import * as commonUtils from 'devextreme/core/utils/common';
+import commonUtils from 'devextreme/core/utils/common';
 
 @Injectable()
 export class WatcherHelper {

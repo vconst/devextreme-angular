@@ -12,7 +12,7 @@ import {
     DxDataGridModule
 } from 'devextreme-angular';
 
-import * as readyCallbacks from 'devextreme/core/utils/ready_callbacks';
+import readyCallbacks from 'devextreme/core/utils/ready_callbacks';
 import * as events from 'devextreme/events';
 
 @Component({

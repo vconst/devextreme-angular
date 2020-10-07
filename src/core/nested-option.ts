@@ -5,7 +5,7 @@ import { getElement } from './utils';
 
 import render from 'devextreme/core/renderer';
 import * as events from 'devextreme/events';
-import * as domAdapter from 'devextreme/core/dom_adapter';
+import domAdapter from 'devextreme/core/dom_adapter';
 
 const VISIBILITY_CHANGE_SELECTOR = 'dx-visibility-change-handler';
 

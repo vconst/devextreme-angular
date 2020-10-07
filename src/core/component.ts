@@ -21,7 +21,7 @@ import { DxTemplateDirective } from './template';
 import { IDxTemplateHost, DxTemplateHost } from './template-host';
 import { EmitterHelper, NgEventsStrategy } from './events-strategy';
 import { WatcherHelper } from './watcher-helper';
-import * as domAdapter from 'devextreme/core/dom_adapter';
+import domAdapter from 'devextreme/core/dom_adapter';
 import * as events from 'devextreme/events';
 
 import {
