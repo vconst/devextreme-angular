@@ -15,7 +15,7 @@ jobs:
       run: |
         echo ${GITHUB_REF}
         echo ${GITHUB_HEAD_REF}
-        echo "This PR is opened by ${{ github.event.issue.user.login }} ."
+        echo "This PR is opened by ${{ github.event.pull_request.user.login }} ."
         npm -v
 
     - name: Clone devextreme repo
