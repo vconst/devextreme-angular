@@ -16,10 +16,16 @@ jobs:
         echo ${GITHUB_REF}
         echo ${GITHUB_HEAD_REF}
         echo "This PR is opened by ${{ github.event.pull_request.user.login }} ."
+        echo "ref: ${{github.event.pull_request.head.ref}}"
+        echo "repo.full_name: ${{github.event.pull_request.head.repo.full_name}}"
         npm -v
 
+    - name: Clone devextreme repo from PR author fork
+      if: github.event_name == 'pull_request'
+      run: git clone -b ${GITHUB_HEAD_REF} https://github.com/${{github.event.pull_request.user.login}}/devextreme ../devextreme-repo
+
     - name: Clone devextreme repo
-      run: git clone -b 21_1 https://github.com/devexpress/devextreme ../devextreme-repo
+      run: test -d ../devextreme-repo || git clone -b 21_1 https://github.com/devexpress/devextreme ../devextreme-repo
 
     - name: Install packages in devextreme repo
       run: |
