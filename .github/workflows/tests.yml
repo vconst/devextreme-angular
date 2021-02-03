@@ -21,6 +21,7 @@ jobs:
         npm -v
 
     - name: Clone devextreme repo from PR author fork
+      continue-on-error: true
       if: github.event_name == 'pull_request'
       run: git clone -b ${GITHUB_HEAD_REF} https://github.com/${{github.event.pull_request.user.login}}/devextreme ../devextreme-repo
 
